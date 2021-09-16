@@ -2,9 +2,7 @@
 
 ## Autor
 **Nome** : Lucas Silva Amorim
-**RA** : 11201720968
 **Github** : [lucas170198](https://github.com/lucas170198/)
-**Video Youtube**: https://youtu.be/NoIF2FrbOw0
 
 ## O que este projeto faz?
 Aplicação CLI de uma versão simplificada do GZIP (sem todos os headers e a formatação convencionada para o arquivo) utilizando o Deflate, algorítmo de compressão de dados que une a codificação de Huffman e o LZ77. A ideia é trazer uma interpretação funcional ao algorítmo (que em grande parte das vezes é descrito e implementado em termos imperativos).
