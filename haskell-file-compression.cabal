@@ -1,0 +1,55 @@
+name:                haskell-file-compression
+version:             0.1.0.0
+cabal-version:       >=1.10
+-- synopsis:
+-- description:
+homepage:            https://github.com/githubuser/haskell-file-compression#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Author name here
+maintainer:          example@example.com
+copyright:           2021 Author name here
+build-type:          Simple
+extra-source-files:  README.md
+
+library
+  exposed-modules:
+      Compression.HuffmanTree, Compression.LZ77, Main, Compression.SimplifiedDeflate
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5,
+      binary,
+      bytestring,
+      hashmap,
+      ListZipper >= 1.2,
+      optparse-applicative,
+      text,
+      bitwise,
+      split
+  default-language: Haskell2010
+
+executable haskell-file-compression-exe
+  hs-source-dirs:      src
+  ghc-options:         -Wall
+  other-modules:       Compression.HuffmanTree, Compression.LZ77, Compression.SimplifiedDeflate
+  main-is:             Main.hs
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5,
+                       haskell-file-compression,
+                       binary,
+                       bytestring,
+                       hashmap,
+                       ListZipper >= 1.2,
+                       optparse-applicative,
+                       text,
+                       bitwise,
+                       split
+
+test-suite haskell-file-compression-tests
+  type:                 exitcode-stdio-1.0
+  main-is:              QuickChecks.hs
+  hs-source-dirs:       test
+  build-depends:        base >= 4.7 && < 5, haskell-file-compression, QuickCheck, bytestring
+  default-language:     Haskell2010
+  
